@@ -1,0 +1,73 @@
+main {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 10vh 90vh auto auto;
+	grid-template-areas: 
+		"navigation"
+		"about"
+		"features"
+		"footer";
+}
+
+#navigation {
+	grid-area: navigation;
+}
+
+#about {
+	grid-area: about;
+	text-align: center;
+}
+
+#about .feather-logo {
+	border-radius: 100%;
+	background-color: var(--bg-color-dull);
+	max-width: 30rem;
+	padding: var(--spacing-5);
+	margin: 0 auto var(--spacing-4) auto;
+}
+
+#features {
+	grid-area: features;
+	background-color: var(--bg-color-dull);
+	text-align: center;
+}
+
+#features .card {
+	padding: var(--spacing-big);
+	background-color: white;
+	border-bottom: solid calc(var(--border-size-normal) * 2) transparent;
+}
+
+#features .card:hover {
+	border-bottom: solid calc(var(--border-size-normal) * 2) var(--accent-color-primary);
+}
+
+#features .card h4 {
+	margin-bottom: var(--spacing-3);
+}
+
+footer {
+	grid-area: footer;
+	background-color: var(--bg-color-dark);
+}
+
+footer .icons img {
+	width: 2rem;
+	margin: calc(var(--spacing-1) / 2) var(--spacing-1) 0 0;
+}
+
+@media only screen and (max-width: 800px) {
+	main {
+		grid-template-rows: auto auto auto auto;
+	}
+
+	#about button { 
+		width: 100%; 
+		margin-top: calc(var(--spacing-1) / 2);
+		margin-bottom: calc(var(--spacing-1) / 2); 
+	}
+
+	#about p { padding: var(--spacing-2) 0; }
+
+	#features .card { padding: var(--spacing-5); }
+}

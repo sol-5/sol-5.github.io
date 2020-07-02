@@ -1,0 +1,74 @@
+/*documentation page styling*/
+#documentation-view {
+	grid-template-columns: 30rem auto;
+	grid-template-rows: 10vh calc(90vh - var(--spacing-3));
+	grid-template-areas: 
+		"overview 	navigation"
+		"overview		details";
+}
+
+@media only screen and (max-width: 800px) {
+	#documentation-view {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 
+			"navigation"
+			"overview"
+			"details";
+	}
+	
+	#documentation-overview, #documentation-details { overflow: hidden; }
+
+	#documentation-overview a {
+		font-size: var(--fg-size-normal);
+	}
+}
+
+#navigation {
+	grid-area: navigation;
+}
+
+#navigation section {
+	padding: var(--spacing-3) 0;
+} 
+
+#documentation-overview {
+	grid-area: overview;
+	font-size: var(--fg-size-small);
+	overflow-y: auto;
+	padding: var(--spacing-3);
+}
+
+#documentation-overview a {
+	display: block;
+	padding: var(--spacing-1) 0 var(--spacing-1) var(--spacing-1);
+	color: var(--fg-color-normal);
+	border-width: 0;
+	border-radius: var(--border-radius);
+}
+
+#documentation-overview a:hover {
+	background-color: var(--bg-color-dull);
+}
+
+#documentation-overview a:active {
+	background-color: var(--bg-color-dark);
+	font-weight: var(--fg-weight-bold);
+}
+
+#documentation-details {
+	grid-area: details;
+	overflow-y: scroll;
+}
+
+#documentation-details p {
+	text-align: justify;
+}
+
+#documentation-details section {
+	padding: var(--spacing-3) 0;
+}
+
+#documentation-details pre {
+	margin: var(--spacing-2) 0;
+}

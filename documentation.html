@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="stylesheets/feather.v2.css">
+	<link rel="stylesheet" href="stylesheets/documentation.css">
+	<link rel="stylesheet" href="stylesheets/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/favicon.ico">
+	<title>Feather CSS</title>
+</head>
+<body>
+	<main>
+
+		<div id="documentation-view" class="d-grid">
+
+			<!-- overview of documentation topics -->
+			<div id="documentation-overview">
+				<a href="#" id="getting-started">Getting Started</a>
+				<a href="#" id="download">Download</a>
+				<a href="#" id="installation">Installation</a>
+				<hr>
+				<a href="#" id="container">Container</a>
+				<a href="#" id="section">Section</a>
+				<hr>
+				<a href="#" id="spacing">Spacing</a>
+				<hr>
+				<a href="#" id="flexbox">Flexbox</a>
+				<a href="#" id="grid">Grid</a>
+				<hr>
+				<a href="#" id="headings">Headings</a>
+				<a href="#" id="paragraphs">Paragraphs</a>
+				<a href="#" id="lists">Lists</a>
+				<a href="#" id="tables">Tables</a>
+				<hr>
+				<a href="#" id="buttons">Buttons</a>
+				<a href="#" id="inputs">Inputs</a>
+				<hr>
+				<a href="#" id="colors">Colors</a>
+				<a href="#" id="messages">Messages</a>
+				<a href="#" id="code">Code</a>
+				<a href="#" id="utilities">Utility Classes</a>
+			</div>
+
+			<div id="navigation">
+				<div class="container">
+					<section>
+						<span> 
+							<a href="index.html" style="display: inline;" class="h6">
+								<img src="images/back.svg" style="width: 2rem; vertical-align: sub; margin-right: var(--spacing-1);" alt="back icon">
+								Home
+							</a>
+						</span>
+					</section>
+				</div>
+			</div>
+
+
+			<!-- discussion of topic -->
+			<div id="documentation-details">
+				<div class="container">
+
+					<section id="section-getting-started">
+						<h1>Getting Started</h1>
+						<p>Feather CSS uses plain CSS and avoids pre-processors like SASS / LESS. Pre-processors require extra steps for compilation and integration, which in our opinion, don't add enough value and therefore can be avoided.</p>
+						<br>
+						<p>Feather relies on CSS Variables which are supported by the latest versions of all major browsers. This provides ease of debugging and easy integraion into exsiting or new web projects.</p>
+						<br>
+					</section>
+
+					<section id="section-download">
+						<h3>Download</h3>
+						<p>Feather CSS can be downloaded from our <a href="https://github.com/moeenn/feather-css">GitHub Repository</a>. A quick link is provided below for you convenience.</p>
+						<button class="button button-primary mv-3">Download</button>
+					</section>
+
+					<section id="section-installation">
+						<h3>Installation</h3>
+						<p>After you have downloaded the Feather CSS File, you can simply link it to your HTML file as below.</p>
+						<pre><code>&lt;link rel="stylesheet" href="stylesheets/feather.v2.css"&gt;</code></pre>
+						<p><span class="fg-bold fg-color-primary">Note: </span>In order to ensure that your website scales properly on smaller screens, also add the following like to your HTML file</p>
+						<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+					</section>
+
+					<hr>
+
+					<section id="section-container">
+						<h3>Container</h3>
+						<p>Container forms the boundary around the contents of the page.</p>
+						<pre><code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></pre>
+					</section>
+
+					<section id="section-section">
+						<h3>Section</h3>
+						<p>Purpose of Sections is to visually distinguish different areas of the Web Page.</p>
+						<pre><code>&lt;section&gt; ... &lt;/section&gt;</code></pre>
+					</section>
+
+					<hr>
+
+					<section id="section-spacing">
+						<h3>Spacing</h3>
+						<p>Feather provides a large variety of Classes for managing spacing on the content on you Web page. Following naming conventions are used.</p>
+
+						<table class="mv-4">
+							<thead>
+								<tr>
+									<th>Shorthand</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><em>m</em></td>
+									<td>Margin</td>
+								</tr>
+								<tr>
+									<td><em>p</em></td>
+									<td>Padding</td>
+								</tr>
+								<tr>
+									<td><em>t</em></td>
+									<td>Top</td>
+								</tr>
+								<tr>
+									<td><em>b</em></td>
+									<td>Bottom</td>
+								</tr>
+								<tr>
+									<td><em>l</em></td>
+									<td>Left</td>
+								</tr>
+								<tr>
+									<td><em>r</em></td>
+									<td>Right</td>
+								</tr>
+								<tr>
+									<td><em>h</em></td>
+									<td>Horizontal</td>
+								</tr>
+								<tr>
+									<td><em>v</em></td>
+									<td>Vertical</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p><span class="fg-bold fg-color-primary">Note: </span>Valid values with spacing classes are <em>1, 2, 3, 4, 5, big, huge</em>.</p>
+
+						<pre><code>&lt;!-- All around Margin size 2 --&gt;
+&lt;div class="m-2"&gt; ... &lt;/div&gt;
+
+&lt;!-- Vertical Margin size 4 --&gt;
+&lt;div class="mv-4"&gt; ... &lt;/div&gt;
+
+&lt;!-- Right Padding size huge --&gt;
+&lt;div class="pr-huge"&gt; ... &lt;/div&gt;</code></pre>
+					</section>
+
+					<hr>
+
+					<section id="section-flexbox">
+						<h3>Flexbox</h3>
+						<p>Feather CSS Flexbox provides a non-responsive way of dividing space. Space can be divided either Horizontally or Vertically</p>
+						<br>
+						<p><span class="fg-bold fg-color-primary">Note: </span>Flex area can be divided according to weights between <em>1 and 6 inclusive</em>.</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<div class="d-flex flex-h">
+								<div class="info flex-6 p-3"><p>Flex 6</p></div>
+								<div class="alert flex-1 p-3"><p>Flex 1</p></div>
+								<div class="positive flex-2 p-3"><p>Flex 2</p></div>
+								<div class="negative flex-1 p-3"><p>Flex 1</p></div>
+							</div>
+						</div>
+
+						<pre><code>&lt;div class="d-flex flex-h"&gt;
+&lt;div class="info flex-6 p-3"&gt;&lt;p&gt;Flex 6&lt;/p&gt;&lt;/div&gt;
+&lt;div class="alert flex-1 p-3"&gt;&lt;p&gt;Flex 1&lt;/p&gt;&lt;/div&gt;
+&lt;div class="positive flex-2 p-3"&gt;&lt;p&gt;Flex 2&lt;/p&gt;&lt;/div&gt;
+&lt;div class="negative flex-1 p-3"&gt;&lt;p&gt;Flex 1&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+						<p><span class="fg-bold fg-color-primary">Note: </span><em>flex-h</em> means Horizontal Flexbox. Alternatively, <em>flex-v</em> can be used for vertical Flexbox.</p>
+
+					</section>
+
+					<section id="section-grid">
+						<h3>Grid</h3>
+						<p>Feather CSS provides a Responsive Grid system that can be divided into Maximum of <em>6 Columns</em>.</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<div class="d-grid two-col">
+								<div class="info p-2"> Child 1 </div>
+								<div class="alert p-2"> Child 2 </div>
+								<div class="positive p-2"> Child 3 </div>
+								<div class="negative p-2"> Child 4 </div>
+							</div>
+						</div>
+
+						<pre><code>&lt;div class="d-grid two-col"&gt;
+&lt;div class="info p-2"&gt; Child 1 &lt;/div&gt;
+&lt;div class="alert p-2"&gt; Child 2 &lt;/div&gt;
+&lt;div class="positive p-2"&gt; Child 3 &lt;/div&gt;
+&lt;div class="negative p-2"&gt; Child 4 &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+						<p><span class="fg-bold fg-color-primary">Note: </span> Valid Class names for columns are <em>.one-col</em>, <em>.two-col</em>, <em>.three-col</em>, <em>.four-col</em>, <em>.five-col</em> and <em>.siv-col</em>.</p>
+
+						<br>
+
+						<p><span class="fg-bold fg-color-primary">Note: </span>The grid automatically adjusts according to the size of the Viewport. In the above example if you don't see two rendered columns it may be because the width of the demo section is too small.</p>
+
+						<br>
+
+						<p><span class="fg-bold fg-color-primary">Note: </span>In Display related classes, <em>.d-none</em> is available for Hiding Elements.</p>
+
+					</section>
+
+					<hr>
+
+					<section id="section-headings">
+						<h3>Headings</h3>
+						<p>Feather CSS supports upto Six Levels of Heading according to the HTML specifications.</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<h1>Heading 1</h1>
+							<h2>Heading 2</h2>
+							<h3>Heading 3</h3>
+							<h4>Heading 4</h4>
+							<h5>Heading 5</h5>
+							<h6>Heading 6</h6>
+						</div>
+
+						<pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+
+					</section>
+
+					<section id="section-paragraphs">
+						<h3>Paragraphs</h3>
+						<p>Paragraph Tags are automatically styled by Feather CSS. No classes need to be specified</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fugiat voluptates autem iusto pariatur molestias incidunt dolor</p>
+						</div>
+
+						<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fugiat voluptates autem iusto pariatur molestias incidunt dolor&lt;/p&gt;</code></pre>
+
+						<p><span class="fg-bold fg-color-primary">Note: </span>Empasis can also be added to specific words using <em>em</em> Tags.</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing</em> elit. Itaque fugiat voluptates autem iusto pariatur molestias incidunt dolor</p>
+						</div>
+
+						<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, &lt;em&gt;consectetur adipisicing&lt;/em&gt; elit. Itaque fugiat voluptates autem iusto pariatur molestias incidunt dolor&lt;/p&gt;</code></pre>
+					</section>
+
+					<section id="section-lists">
+						<h3>Lists</h3>
+						<p>List related Tags are automatically styled by Feather CSS and no CSS Classes need to be specified.</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<ol>
+								<li>Ordered 1</li>
+								<li>Ordered 2</li>
+								<li>Ordered 3</li>
+								<li>Nested List
+									<ul>
+										<li>Unordered 1</li>
+										<li>Unordered 2</li>
+										<li>Unordered 3</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+
+						<pre><code>&lt;ol&gt;
+&lt;li&gt;Ordered 1&lt;/li&gt;
+&lt;li&gt;Ordered 2&lt;/li&gt;
+&lt;li&gt;Ordered 3&lt;/li&gt;
+&lt;li&gt;Nested List
+&lt;ul&gt;
+&lt;li&gt;Unordered 1&lt;/li&gt;
+&lt;li&gt;Unordered 2&lt;/li&gt;
+&lt;li&gt;Unordered 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+					</section>
+
+					<section id="section-tables">
+						<h3>Tables</h3>
+						<p>Table related Tags are automatically styled by Feather CSS. No classes need to be specified</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<table>
+								<thead>
+									<tr>
+										<th>ID.</th>
+										<th>Name</th>
+										<th>Email</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>01</td>
+										<td>User</td>
+										<td>email@email.com</td>
+									</tr>
+									<tr>
+										<td>02</td>
+										<td>User</td>
+										<td>email@email.com</td>
+									</tr>
+									<tr>
+										<td>03</td>
+										<td>User</td>
+										<td>email@email.com</td>
+									</tr>
+									<tr>
+										<td>04</td>
+										<td>User</td>
+										<td>email@email.com</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<pre><code>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;ID.&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Email&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;01&lt;/td&gt;
+&lt;td&gt;User&lt;/td&gt;
+&lt;td&gt;email@email.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;02&lt;/td&gt;
+&lt;td&gt;User&lt;/td&gt;
+&lt;td&gt;email@email.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;03&lt;/td&gt;
+&lt;td&gt;User&lt;/td&gt;
+&lt;td&gt;email@email.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;04&lt;/td&gt;
+&lt;td&gt;User&lt;/td&gt;
+&lt;td&gt;email@email.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+						<p><span class="fg-bold fg-color-primary">Note: </span>Tables are Fluid and will take up all available horizontal space.</p>
+
+					</section>
+
+					<hr>
+
+					<section id="section-buttons">
+						<h3>Buttons</h3>
+						<p>Feather CSS implements three different styles of Buttons i.e. <em>button, primary, thin</em>.</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<div class="mv-1">
+								<button>Normal</button>
+								<button class="button button-primary">Primary</button>
+							</div>
+							<div class="mv-1">
+								<button class="button button-thin">Thin</button>
+								<button class="button button-primary button-thin">Thin Primary</button>
+							</div>
+						</div>
+
+						<code><pre>&lt;div class="mv-1"&gt;
+&lt;button&gt;Normal&lt;/button&gt;
+&lt;button class="button button-primary"&gt;Primary&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="mv-1"&gt;
+&lt;button class="button button-thin"&gt;Thin&lt;/button&gt;
+&lt;button class="button button-primary button-thin"&gt;Thin Primary&lt;/button&gt;
+&lt;/div&gt;</pre></code>
+
+					</section>
+
+					<section id="section-inputs">
+						<h3>Inputs</h3>
+						<p>Feather Styles the most commonly used Input Elements.</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<form action="">
+								<fieldset class="mv-3">
+									<label for="name">Name</label>
+									<input type="text" name="name" placeholder="Enter Name">
+									<p class="input-desc">Enter your full name for our records</p>
+								</fieldset>
+
+								<fieldset class="mv-3">
+									<label for="email">Email</label>
+									<input type="email" name="email" placeholder="Enter your Email">
+									<p class="input-desc">Enter your current email address for our records</p>
+								</fieldset>
+
+								<fieldset class="mv-3">
+									<label for="city">City</label>
+									<select name="city">
+										<option value="null"></option>
+										<option value="nyc">New York</option>
+										<option value="msc">Moscow</option>
+										<option value="bij">Beijing</option>
+									</select>
+									<p class="input-desc">Enter the city you currently live in</p>
+								</fieldset>
+
+								<fieldset class="mv-3">
+									<label for="remarks">Remarks</label>
+									<textarea name="remarks" placeholder="Enter your remarks"></textarea>
+									<p class="input-desc">Please describe your experience with our services</p>
+								</fieldset>
+
+<!-- 										<fieldset class="mv-3">
+									<label for="cookie">Stay Logged In</label>
+									<input type="checkbox" for="cookie">
+								</fieldset> -->
+
+								<fieldset>
+									<input type="submit" value="Create" class="button button-primary">
+								</fieldset>
+							</form>
+
+						</div>
+
+						<code><pre>&lt;form action=""&gt;
+&lt;fieldset class="mv-3"&gt;
+&lt;label for="name"&gt;Name&lt;/label&gt;
+&lt;input type="text" name="name" placeholder="Enter Name"&gt;
+&lt;p class="input-desc"&gt;Enter your full name for our records&lt;/p&gt;
+&lt;/fieldset&gt;
+
+&lt;fieldset class="mv-3"&gt;
+&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input type="email" name="email" placeholder="Enter your Email"&gt;
+&lt;p class="input-desc"&gt;Enter your current email address for our records&lt;/p&gt;
+&lt;/fieldset&gt;
+
+&lt;fieldset class="mv-3"&gt;
+&lt;label for="city"&gt;City&lt;/label&gt;
+&lt;select name="city"&gt;
+	&lt;option value="null"&gt;&lt;/option&gt;
+	&lt;option value="nyc"&gt;New York&lt;/option&gt;
+	&lt;option value="msc"&gt;Moscow&lt;/option&gt;
+	&lt;option value="bij"&gt;Beijing&lt;/option&gt;
+&lt;/select&gt;
+&lt;p class="input-desc"&gt;Enter the city you currently live in&lt;/p&gt;
+&lt;/fieldset&gt;
+
+&lt;fieldset class="mv-3"&gt;
+&lt;label for="remarks"&gt;Remarks&lt;/label&gt;
+&lt;textarea name="remarks" placeholder="Enter your remarks"&gt;&lt;/textarea&gt;
+&lt;p class="input-desc"&gt;Please describe your experience with our services&lt;/p&gt;
+&lt;/fieldset&gt;
+
+&lt;fieldset&gt;
+&lt;input type="submit" value="Create" class="button button-primary"&gt;
+&lt;/fieldset&gt;
+&lt;/form&gt;</pre></code>
+
+					</section>
+
+					<hr>
+
+					<section id="section-colors">
+						<h3>Colors</h3>
+						<p>Colors can be used to visually distinguish different types of Event. Feather CSS provides styling for four types of Events i.e. <em>.positive, .negative, .info, .alert</em>.</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<div class="positive mv-2 p-2">Positive</div>
+							<div class="negative mv-2 p-2">Negative</div>
+							<div class="info mv-2 p-2">Info</div>
+							<div class="alert mv-2 p-2">Alert</div>
+						</div>
+
+						<code><pre>&lt;div class="positive mv-2 p-2"&gt;Positive&lt;/div&gt;
+&lt;div class="negative mv-2 p-2"&gt;Negative&lt;/div&gt;
+&lt;div class="info mv-2 p-2"&gt;Info&lt;/div&gt;
+&lt;div class="alert mv-2 p-2"&gt;Alert&lt;/div&gt;
+</pre></code>
+
+					</section>
+
+					<section id="section-messages">
+						<h3>Messages</h3>
+						<p>Feather CSS provides styles for two types of Messages i.e. <em>.message, .flash-message</em>.</p>
+
+						<div class="border rounded-corners mv-3">
+							<div class="flash-message alert">
+								<div class="container">
+									<p>This is an Alert Flash Message</p>
+								</div>
+							</div>
+
+							<div class="p-3">
+								<div class="message">
+									<h4>Normal Message</h4>
+									<p>This is a normal Message Box</p>
+								</div>
+							</div>
+
+						</div>
+
+						<code><pre>&lt;div class="flash-message alert"&gt;
+&lt;div class="container"&gt;
+&lt;p&gt;This is an Alert Flash Message&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="message"&gt;
+&lt;h4&gt;Normal Message&lt;/h4&gt;
+&lt;p&gt;This is a normal Message Box&lt;/p&gt;
+&lt;/div&gt;
+</pre></code>
+
+					<p class="mv-2"><span class="fg-bold fg-color-primary">Note: </span>As you can see from the above Example, Event Colors can be applied to Messages.</p>
+
+					</section>
+
+					<section id="section-code">
+						<h3>Code</h3>
+						<p>Code related Tags are automatically styled by Feather CSS and no additional CSS Classes are needed.</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<code><pre>print("Hello World!")</pre></code>
+						</div>
+
+						<code><pre>&lt;code&gt;
+&lt;pre&gt;print("Hello World!")&lt;/pre&gt;
+&lt;/code&gt;</pre></code>
+
+					</section>
+
+					<section id="section-utilities">
+						<h3>Utility Classes</h3>
+						<h6 class>Fonts</h6>
+						<p>Font stylings can be set using the following CSS Classes</p>
+
+						<div class="border rounded-corners p-3 mv-3">
+							<p class="fg-bold mv-1">Bold Text</p>
+							<p class="fg-justify mv-1">Justify Text</p>
+							<p class="fg-color-normal mv-1">Normal Text Color</p>
+							<p class="fg-color-dull mv-1">Dull Text Color</p>
+							<p class="fg-color-primary mv-1">Primary Color Text</p>
+						</div>
+
+						<code class="mv-2"><pre>&lt;p class="fg-bold mv-1"&gt;Bold Text&lt;/p&gt;
+&lt;p class="fg-justify mv-1"&gt;Justify Text&lt;/p&gt;
+&lt;p class="fg-color-normal mv-1"&gt;Normal Text Color&lt;/p&gt;
+&lt;p class="fg-color-dull mv-1"&gt;Dull Text Color&lt;/p&gt;
+&lt;p class="fg-color-primary mv-1"&gt;Primary Color Text&lt;/p&gt;</pre></code>
+
+					<h6>Background</h6>
+					<p>Background colors can be adjusted using the following CSS Classes</p>
+
+					<div class="border rounded-corners p-3 mv-3">								
+						<div class="bg-color-normal border rounded-corners mv-2 p-2">Normal Background Color</div>
+						<div class="bg-color-dull border rounded-corners mv-2 p-2">Dull Background Color</div>
+						<div class="bg-color-dark border rounded-corners mv-2 p-2">Dark Background Color</div>
+						<div class="bg-color-primary fg-color-inverted border rounded-corners mv-2 p-2">Primary Background Color</div>
+					</div>
+
+					<code class="mv-2"><pre>&lt;div class="bg-color-normal border rounded-corners mv-2 p-2"&gt;Normal Background Color&lt;/div&gt;
+&lt;div class="bg-color-dull border rounded-corners mv-2 p-2"&gt;Dull Background Color&lt;/div&gt;
+&lt;div class="bg-color-dark border rounded-corners mv-2 p-2"&gt;Dark Background Color&lt;/div&gt;
+&lt;div class="bg-color-primary fg-color-invert border rounded-corners mv-2 p-2"&gt;Primary Background Color&lt;/div&gt;</pre></code>
+
+					</section>
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script type="module" src="scripts/main.js"></script>
+
+</body>
+</html>
+
