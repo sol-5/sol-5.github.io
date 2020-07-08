@@ -1,4 +1,4 @@
-#SOL-5 INC. Official
+# SOL-5 INC. Official
 Complete Website Coming Soon
 
 ## Projects
