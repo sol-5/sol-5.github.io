@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" href="static/css/feather.v2.css">
+  <link rel="stylesheet" href="static/css/custom.css">
+  <title>Request Test</title>
+</head>
+<body>
+  <div id="root">
+  	<!-- floating action button -->
+  	<div class="full-width">
+	    <button class="button-thin" id="buttonCreateRequest"><img src="static/images/add.svg" style="width: 70%; height: 70%"></button>
+  	</div>
+
+
+		<div class="container">
+			<div id="mainWindow" class="d-grid">
+
+	   		<!-- response window -->
+				<div id="responseWindow">
+			    <div class="rounded-corners dialogue d-flex flex-v">
+
+			      <div class="d-flex flex-h">
+			        <h6 class="fg-color-primary">Response</h6>
+              <div class="fg-align-right pv-1 d-none" style="width: 100%;" id="responseStatus">
+                <span class="fg-color-primary">Status: </span><span class="fg-size-small mr-1" id="httpStatus">200</span>
+                <span class="fg-color-primary">Delay: </span><span class="fg-size-small" id="responseDelay">150ms</span>
+              </div>
+            </div>
+
+			      <code>
+			        <pre id="responseBody"></pre>
+			      </code>
+			    </div>
+				</div>
+
+
+		    <!-- log window -->
+				<div id="logWindow">
+			    <div class="rounded-corners dialogue d-flex flex-v">
+			      <h6 class="fg-color-primary">Log</h6>
+			      <code>
+			        <pre id="logOutput"></pre>
+			      </code>
+			    </div>
+				</div>
+
+		    <!-- history window -->
+				<div id="historyWindow">
+			    <div class="rounded-corners dialogue d-flex flex-v">
+			      <h6 class="fg-color-primary">History</h6>
+			      <div>
+			        <table>
+			          <tbody id="historyEntries">
+			          </tbody>
+			        </table>
+			      </div>
+			    </div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- new request dialogue box -->
+    <section id="newRequest" class="d-none">
+      <div class="dullDialogueBg">
+        <div class="dialogue">
+          <div class="container pv-2">
+
+            <div class="d-flex flex-h">
+              <div class="flex-1">
+                <h3>Create Request</h3>
+              </div>
+              <div class="flex-1 fg-align-right">
+                <button class="button-thin" style="padding: 1rem;" id="closeRequestDialogue_1"><span class="fg-bold">x</span></button>
+              </div>
+            </div>
+
+            <form action="" id="newRequestForm">
+
+              <fieldset class="mv-3">
+                <label for="url" required="required">URL</label>
+                <input type="url" name="url" id="newRequestURL" required="required">
+              </fieldset>
+
+              <fieldset class="mv-3">
+                <label for="method">HTTP Method</label>
+                <select name="method" id="httpMethodMenu">
+                  <option value="get">GET</option>
+                  <option value="post">POST</option>
+                  <option value="put">PUT</option>
+                  <option value="delete">DELETE</option>
+                </select>
+              </fieldset>
+
+              <fieldset class="mv-3 d-none" id="newRequestOptionalField">
+                <label for="jsonstring">JSON Payload</label>
+                <textarea name="jsonstring" id="newRequestJSONPayload"></textarea>
+                <p class="fg-size-small d-none">Invalid JSON</p>
+              </fieldset>
+
+              <div class="mt-4 mb-1 d-flex flex-h">
+                <input type="submit" value="Send" class="button-primary flex-1 mr-1" id="newRequestSubmitButton">
+                <button class="flex-1" id="closeRequestDialogue_2">Cancel</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script type="module" src="static/scripts/index.js"></script>
+</body>
+</html>

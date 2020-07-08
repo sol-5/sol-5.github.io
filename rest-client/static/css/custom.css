@@ -1,0 +1,138 @@
+
+.container {
+  max-width: 1200px;
+}
+
+body {
+  background-color: rgba(0,0,0,0.05);
+}
+
+button {
+  margin: calc(var(--spacing-1) / 2) 0;;
+}
+
+#root {
+  padding: var(--spacing-3) 0;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+#root .full-width {
+  position: fixed;
+  bottom: var(--spacing-2);
+  z-index: 9;
+  text-align: center;
+}
+
+#buttonCreateRequest {
+  background: var(--accent-color-primary);
+  color: white;
+  font-weight: var(--fg-weight-bold);
+  box-shadow: var(--shadow-normal);
+  border-radius: 100%;
+  min-width: 5rem;
+  max-width: 5rem;
+  min-height: 5rem;
+  max-height: 5rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.dullDialogueBg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.2);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.dialogue {
+  background-color: white;
+  padding: var(--spacing-2);
+  box-shadow: var(--shadow-normal);
+}
+
+#newRequest .flex-1 {
+  flex-basis: 50%;
+}
+
+button {
+  margin: calc(var(--spacing-1) / 2) 0;
+}
+
+code {
+  padding: var(--spacing-2);
+  height: 100%;
+  overflow: auto;
+}
+
+textarea {
+  font-family: monospace;
+}
+
+.fg-size-small { font-size: var(--fg-size-small); }
+
+.d-grid {
+  grid-gap: var(--spacing-2);
+}
+
+#newRequest form .error label,
+#newRequest form .error p {
+  color: rgba(213,62,60,1);
+}
+
+#newRequest form .error textarea,
+#newRequest form .error input {
+  color: rgba(213,62,60,1);
+  background-color: rgba(213,62,60,0.08);
+  border-color: rgba(213,62,60,1);
+}
+
+#mainWindow {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 43vh);
+  grid-template-areas:
+    "response   log"
+    "response   history";
+}
+
+#mainWindow #responseWindow {
+  grid-area: response;
+}
+
+#mainWindow #logWindow {
+  grid-area: log;
+}
+
+#mainWindow #historyWindow {
+  grid-area: history;
+}
+
+#historyWindow #historyEntries tr {
+  cursor: pointer;
+}
+
+#historyWindow #historyEntries tr td {
+  padding: var(--spacing-1);
+}
+
+#historyWindow #historyEntries tr td img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  #mainWindow {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 87vh);
+    grid-template-areas:
+      "response"
+      "history"
+      "log";
+  }
+}
