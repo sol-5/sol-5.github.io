@@ -2,48 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="stylesheets/feather.v2.1.css">
-	<link rel="stylesheet" href="stylesheets/navbar.css">
-	<link rel="stylesheet" href="stylesheets/index.css">
+	<link rel="stylesheet" href="static/stylesheets/feather.v2.1.css">
+	<link rel="stylesheet" href="static/stylesheets/index.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/favicon.ico">
-	<title>Feather CSS</title>
+	<link rel="icon" type="image/png" href="static/images/favicon.ico">
+	<title>Feather CSS - HOME</title>
 </head>
 <body>
 	<main>
-		<div id="navigation">
-			<div class="container">
-				<div class="navbar">
-					<div class="logo">
-						<span>Feather CSS</span>
-					</div>
-					<div class="links">
-						<a class="active" href="#">Download</a>
-						<a href="documentation.html">Documentation</a>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<!-- about section -->
 		<div id="about">
-			<div class="container">
-				<section>
-					<div class="feather-logo">
-						<img src="images/logo.svg" alt="feather logo">
-					</div>
-					<div class="mv-5">
-						<h1>Feather CSS</h1>
-						<p>
-							A Minimalistic, Responsive, CSS Library for building Intuitive UIs
-						</p>
-						<div class="mt-3">
-							<a href="https://raw.githubusercontent.com/sol-5/feather-css/master/dist/feather.v2.css"><button class="button button-primary mr-1">Download v2.0</button></a>
-							<a href="documentation.html"><button class="button">Documentation</button></a>
+			<!-- <div class="container"> -->
+				<div class="about-content d-flex flex-v ph-2 pv-4">
+					<div>
+						<div class="feather-logo">
+							<img src="static/images/logo.svg" alt="feather logo">
 						</div>
-						<a href="#"><img src="images/down.svg" class="mt-big" alt="Next Section" style="width: 4rem;"></a>
+
+						<div>
+							<h1>Feather CSS</h1>
+							<p>
+								A Minimalistic, Responsive, CSS Library for building Intuitive UIs
+							</p>
+
+							<div class="mt-2 mb-4">
+								<a href="https://raw.githubusercontent.com/sol-5/feather-css/master/dist/feather.v2.1.css"><button class="button button-primary mr-1">Download v2.1</button></a>
+								<a href="documentation.html"><button class="button">Documentation</button></a>
+							</div>
+							<a href="#"><img id="nextSection" src="static/images/down.svg" alt="Next Section" style="width: 4rem;"></a>
+						</div>
 					</div>
-				</section>
+
+				<!-- </div> -->
 			</div>
 		</div>
 
@@ -55,28 +46,28 @@
 
 					<div class="d-grid two-col mv-3">
 
-						<div class="card rounded-corners">
+						<div class="card rounded-corners shadow">
 							<h4>Lightweight</h4>
 							<p class="fg-align-justify">
 								Feather is a tiny library consisting of ~500 Lines of Code. It provides all the basic components that are needed in building unique User Interfaces.
 							</p>
 						</div>
 
-						<div class="card rounded-corners">
+						<div class="card rounded-corners shadow">
 							<h4>Responsive</h4>
 							<p class="fg-align-justify">
 								Feather is Responsive by Default. Your websites will scale and adapt fluidly according to your user's device.
 							</p>
 						</div>
 
-						<div class="card rounded-corners">
+						<div class="card rounded-corners shadow">
 							<h4>Minimal</h4>
 							<p class="fg-align-justify">
 								Feather incorporates the Latest trends in UI Design and the result is websites with Clean and Modern look.
 							</p>
 						</div>
 
-						<div class="card rounded-corners">
+						<div class="card rounded-corners shadow">
 							<h4>Customizable</h4>
 							<p class="fg-align-justify">
 								Feather leverages the power of CSS Variables to provide complete customizability. These variables can be used to quickly build custom styles.
@@ -91,21 +82,14 @@
 
 	<footer>
 		<div class="container">
-			<section>
-				<div class="d-grid two-col mv-5">
-					<div>
-						<p class="fg-italic fg-color-primary">Created By</p>
-						<a href="#"><h3 class="fg-color-dull">Sol-5 Inc.</h3></a>
-						<div class="icons">
-							<a href="#"><img src="images/github.svg" alt="github"></a>
-							<a href="#"><img src="images/facebook.svg" alt="facebook"></a>
-						</div>
-					</div>
-				</div>
+			<section class="fg-align-center">
+				<p class="fg-color-dull fg-size-small">&copy; Created By</p>
+				<a href="https://sol-5.github.io/index"><img src="static/images/sol_5_logo.png" class="logo pv-2"></a>
 			</section>
 		</div>
 	</footer>
 
+	<script src="static/scripts/index.js" type="module"></script>
 </body>
 </html>
 

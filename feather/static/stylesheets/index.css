@@ -1,16 +1,11 @@
 main {
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 10vh 90vh auto auto;
-	grid-template-areas: 
-		"navigation"
+	grid-template-rows: 100vh auto auto;
+	grid-template-areas:
 		"about"
 		"features"
 		"footer";
-}
-
-#navigation {
-	grid-area: navigation;
 }
 
 #about {
@@ -21,9 +16,15 @@ main {
 #about .feather-logo {
 	border-radius: 100%;
 	background-color: var(--bg-color-dull);
-	max-width: 30rem;
+	max-width: 25rem;
+	max-height: 25rem;
 	padding: var(--spacing-5);
 	margin: 0 auto var(--spacing-4) auto;
+}
+
+#about .about-content {
+  align-items: center;
+  justify-content: center;
 }
 
 #features {
@@ -56,15 +57,25 @@ footer .icons img {
 	margin: calc(var(--spacing-1) / 2) var(--spacing-1) 0 0;
 }
 
+footer .logo {
+	max-width: 20rem;
+	filter: grayscale(1.0) brightness(3.0);
+}
+
+footer .logo:hover {
+	filter: none;
+	transition: all 0.3s ease 0s
+}
+
 @media only screen and (max-width: 800px) {
 	main {
 		grid-template-rows: auto auto auto auto;
 	}
 
-	#about button { 
-		width: 100%; 
+	#about button {
+		width: 100%;
 		margin-top: calc(var(--spacing-1) / 2);
-		margin-bottom: calc(var(--spacing-1) / 2); 
+		margin-bottom: calc(var(--spacing-1) / 2);
 	}
 
 	#about p { padding: var(--spacing-2) 0; }

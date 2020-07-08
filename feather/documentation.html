@@ -2,17 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="stylesheets/feather.v2.1.css">
-	<link rel="stylesheet" href="stylesheets/documentation.css">
-	<link rel="stylesheet" href="stylesheets/custom.css">
+	<link rel="stylesheet" href="static/stylesheets/feather.v2.1.css">
+	<link rel="stylesheet" href="static/stylesheets/documentation.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/favicon.ico">
-	<title>Feather CSS</title>
+	<link rel="icon" type="image/png" href="static/images/favicon.ico">
+	<title>Feather CSS - Docs</title>
 </head>
 <body>
 	<main>
 
 		<div id="documentation-view" class="d-grid">
+			<div id="title" class="bg-color-dull">
+				<span>
+					<a href="index.html" style="display: inline;" class="h6">
+					<img src="static/images/back.svg" style="width: 2rem; height: 2rem;" class="mr-1"  alt="back icon">
+					</a>
+					<h2 style="display: inline; vertical-align: sub;" class="m-0">Feather <em class="fg-size-small">Docs</em></h2>
+				</span>
+			</div>
 
 			<!-- overview of documentation topics -->
 			<div id="documentation-overview">
@@ -40,45 +47,31 @@
 				<a href="#" id="messages">Messages</a>
 				<a href="#" id="code">Code</a>
 				<a href="#" id="utilities">Utility Classes</a>
+				<hr>
 			</div>
-
-			<div id="navigation">
-				<div class="container">
-					<section>
-						<span>
-							<a href="index.html" style="display: inline;" class="h6">
-								<img src="images/back.svg" style="width: 2rem; vertical-align: sub; margin-right: var(--spacing-1);" alt="back icon">
-								Home
-							</a>
-						</span>
-					</section>
-				</div>
-			</div>
-
 
 			<!-- discussion of topic -->
 			<div id="documentation-details">
 				<div class="container">
 
 					<section id="section-getting-started">
-						<h1>Getting Started</h1>
+						<h3>Getting Started</h3>
 						<p>Feather CSS uses plain CSS and avoids pre-processors like SASS / LESS. Pre-processors require extra steps for compilation and integration, which in our opinion, don't add enough value and therefore can be avoided.</p>
 						<br>
 						<p>Feather relies on CSS Variables which are supported by the latest versions of all major browsers. This provides ease of debugging and easy integraion into exsiting or new web projects.</p>
-						<br>
 					</section>
 
 					<section id="section-download">
 						<h3>Download</h3>
 						<p>Feather CSS can be downloaded from our <a href="https://github.com/sol-5/feather-css">GitHub Repository</a>. A quick link is provided below for you convenience.</p>
-						<a href="https://raw.githubusercontent.com/sol-5/feather-css/master/dist/feather.v2.css"><button class="button button-primary mv-3">Download</button></a>
+						<a href="https://raw.githubusercontent.com/sol-5/feather-css/master/dist/feather.v2.1.css"><button class="button button-primary">Download</button></a>
 					</section>
 
 					<section id="section-installation">
 						<h3>Installation</h3>
 						<p>After you have downloaded the Feather CSS File, you can simply link it to your HTML file as below.</p>
-						<pre><code>&lt;link rel="stylesheet" href="stylesheets/feather.v2.css"&gt;</code></pre>
-						<p><span class="fg-bold fg-color-primary">Note: </span>In order to ensure that your website scales properly on smaller screens, also add the following like to your HTML file</p>
+						<pre><code data-lang="html">&lt;link rel="stylesheet" href="stylesheets/feather.v2.1.css"&gt;</code></pre>
+						<p><span class="note">Note: </span>In order to ensure that your website scales properly on smaller screens, also add the following like to your HTML file</p>
 						<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
 					</section>
 
@@ -145,7 +138,7 @@
 							</tbody>
 						</table>
 
-						<p><span class="fg-bold fg-color-primary">Note: </span>Valid values with spacing classes are <em>1, 2, 3, 4, 5, big, huge</em>.</p>
+						<p><span class="note">Note: </span>Valid values with spacing classes are <em>1, 2, 3, 4, 5, big, huge</em>.</p>
 
 						<pre><code>&lt;!-- All around Margin size 2 --&gt;
 &lt;div class="m-2"&gt; ... &lt;/div&gt;
@@ -163,7 +156,7 @@
 						<h3>Flexbox</h3>
 						<p>Feather CSS Flexbox provides a non-responsive way of dividing space. Space can be divided either Horizontally or Vertically</p>
 						<br>
-						<p><span class="fg-bold fg-color-primary">Note: </span>Flex area can be divided according to weights between <em>1 and 6 inclusive</em>.</p>
+						<p><span class="note">Note: </span>Flex area can be divided according to weights between <em>1 and 6 inclusive</em>.</p>
 
 						<div class="border rounded-corners p-3 mv-3">
 							<div class="d-flex flex-h">
@@ -181,7 +174,7 @@
 &lt;div class="negative flex-1 p-3"&gt;&lt;p&gt;Flex 1&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-						<p><span class="fg-bold fg-color-primary">Note: </span><em>flex-h</em> means Horizontal Flexbox. Alternatively, <em>flex-v</em> can be used for vertical Flexbox.</p>
+						<p><span class="note">Note: </span><em>flex-h</em> means Horizontal Flexbox. Alternatively, <em>flex-v</em> can be used for vertical Flexbox.</p>
 
 					</section>
 
@@ -205,15 +198,15 @@
 &lt;div class="negative p-2"&gt; Child 4 &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-						<p><span class="fg-bold fg-color-primary">Note: </span> Valid Class names for columns are <em>.one-col</em>, <em>.two-col</em>, <em>.three-col</em>, <em>.four-col</em>, <em>.five-col</em> and <em>.siv-col</em>.</p>
+						<p><span class="note">Note: </span> Valid Class names for columns are <em>.one-col</em>, <em>.two-col</em>, <em>.three-col</em>, <em>.four-col</em>, <em>.five-col</em> and <em>.siv-col</em>.</p>
 
 						<br>
 
-						<p><span class="fg-bold fg-color-primary">Note: </span>The grid automatically adjusts according to the size of the Viewport. In the above example if you don't see two rendered columns it may be because the width of the demo section is too small.</p>
+						<p><span class="note">Note: </span>The grid automatically adjusts according to the size of the Viewport. In the above example if you don't see two rendered columns it may be because the width of the demo section is too small.</p>
 
 						<br>
 
-						<p><span class="fg-bold fg-color-primary">Note: </span>In Display related classes, <em>.d-none</em> is available for Hiding Elements.</p>
+						<p><span class="note">Note: </span>In Display related classes, <em>.d-none</em> is available for Hiding Elements.</p>
 
 					</section>
 
@@ -251,7 +244,7 @@
 
 						<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque fugiat voluptates autem iusto pariatur molestias incidunt dolor&lt;/p&gt;</code></pre>
 
-						<p><span class="fg-bold fg-color-primary">Note: </span>Empasis can also be added to specific words using <em>em</em> Tags.</p>
+						<p><span class="note">Note: </span>Empasis can also be added to specific words using <em>em</em> Tags.</p>
 
 						<div class="border rounded-corners p-3 mv-3">
 							<p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing</em> elit. Itaque fugiat voluptates autem iusto pariatur molestias incidunt dolor</p>
@@ -364,7 +357,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
 
-						<p><span class="fg-bold fg-color-primary">Note: </span>Tables are Fluid and will take up all available horizontal space.</p>
+						<p><span class="note">Note: </span>Tables are Fluid and will take up all available horizontal space.</p>
 
 					</section>
 
@@ -378,8 +371,7 @@
 							<div class="mv-1">
 								<button>Normal</button>
 								<button class="button button-primary">Primary</button>
-							</div>
-							<div class="mv-1">
+								<br>
 								<button class="button button-thin">Thin</button>
 								<button class="button button-primary button-thin">Thin Primary</button>
 							</div>
@@ -533,7 +525,7 @@
 &lt;/div&gt;
 </pre></code>
 
-					<p class="mv-2"><span class="fg-bold fg-color-primary">Note: </span>As you can see from the above Example, Event Colors can be applied to Messages.</p>
+					<p class="mv-2"><span class="note">Note: </span>As you can see from the above Example, Event Colors can be applied to Messages.</p>
 
 					</section>
 
@@ -592,7 +584,7 @@
 		</div>
 	</main>
 
-	<script type="module" src="scripts/main.js"></script>
+	<script type="module" src="static/scripts/documentation.js"></script>
 
 </body>
 </html>
